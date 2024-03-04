@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanvi Khot</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctext x='0' y='12' font-size='12' fill='%23ff0000'%3E🌷%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-4">
+    <header class="text-center">
+      <img src="images/tanvipfp.png" alt="Your Profile Picture" class="img-fluid rounded-circle" style="width: 500px; height: 500px;">
+      <h1 class="mt-3">Hello, I'm Tanvi, a <span style="color: #be6b06;">Software Engineer.</span> </h1>
+    </header>
+    <div class="container">
+      
+  
+      <section id="contact" class="text-center">
+  
+        <button type="button" class="btn btn-success mr-1 mb-2" id="emailButton" onclick='openLink("✉️", "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent("tanvikhot@berkeley.edu"), "emailButton")'>
+          ✉️
+          <span class="badge badge-light"></span>
+        </button>
+  
+        <button type="button" class="btn btn-info mr-1 mb-2" id="linkedInButton" onclick="openLink('<img src=\'images/linkedin.png\' alt=\'LinkedIn Icon\' width=\'20\' height=\'20\'>', 'linkedin.com/in/tanvi-khot', 'linkedInButton')">
+          <img src="images/linkedin.png" alt="LinkedIn Icon" width="20" height="20">
+          <span class="badge badge-light"></span>
+        </button>
+  
+        <button type="button" class="btn btn-warning mr-1 mb-2" id="githubButton" onclick="openLink('<img src=\'images/github.png\' alt=\'GitHub Icon\' width=\'20\' height=\'20\'>', 'github.com/tanvikhot', 'githubButton')">
+          <img src="images/github.png" alt="GitHub Icon" width="20" height="20">
+          <span class="badge badge-light"></span>
+        </button>
+      </section>
+    </div>
+    
+    <section id="about">
+        <p></p><p></p><p></p><p></p>
+      <h2>The Elevator Pitch</h2>
+      <p>I am a fourth-year at UC Berkeley majoring in Computer Science with a focus on data and its applications to business, AI, and software engineering. I’ve done a lot of cool projects and research in a wide variety of specializations, and have experience working with LLMs/NLP, Big Data, Machine Learning, CI/CD, and full-stack applications. I  have prior experience working with languages like Python, Java, C, Javascript, and several others.
+    </p>
+    </section>
+
+<p></p><p></p><p></p>
+    <section id="experience">
+      <h2>My Work</h2>
+      <p></p><p></p><p></p>
+
+  
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">SWE Intern - <span style="color: #5eacff;">Salesforce</span></h3>
+            <h6><span style="color: #676767;">May 2023 - August 2023</span></h6>
+            <p class="card-text">Integrated the ELK stack, including Grafana, with Prometheus to export Jenkins metrics to a Time Series Database. 
+                Built models using Pandas to leverage Grafana dashboards for data visualization; Worked closely with the pipeline engineering team.
+                </p>
+          </div>
+        </div>
+        
+       <p></p><p></p>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">SWE Intern - <span style="color: #5eacff;">Salesforce</span></h3>
+              <h6><span style="color: #676767;">May 2022 - August 2022</span></h6>
+              <p class="card-text">Built APIs to proxy requests from authenticated local users to AWS resources like Secrets Manager and S3, authenticated using their GitHub access tokens. AWS resources were provisioned for multiple master accounts per user group, and User group management and user preferences were stored in MongoDB
+            </p>
+            </div>
+          </div>
+
+          <p></p><p></p>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Undergraduate Researcher - <span style="color: #003874;">Berkeley Artificial Intelligence Research [BAIR] </span></h3>
+              <h6><span style="color: #676767;">October 2023 - Present</span></h6>
+              <p class="card-text">LLMs and Speech @ Berkeley Speech Group under Gopala Anumanchipalli and Akshat Gupta- 
+                Researching a novel approach in knowledge editing LLMs; verifying the persistence of an added fact and related knowledge to an LLM through past endeavors such as ROME, MEND, and MEMIT.
+                </p>
+            </div>
+          </div>
+          <p></p><p></p>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Project Manager  - <span style="color: #003874;">Big Data at Berkeley </span></h3>
+              <h6><span style="color: #676767;">August 2021 - Present</span></h6>
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title"><span style="color: #003874;">Valuenex </span></h3>
+                  <p class="card-text">Designed a web scraping tool using Selenium to gather recent tweets and Google results about startups and used the chatGPT API to predict evaluation using that info. Built a model around the normal distribution to predict the uniqueness of the company to add to Valuenex’s product “startup finder”
+                    
+                    </p>
+              </div> 
+              </div>  
+              <p></p><p></p><p></p>
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title"><span style="color: #0c529e;">American Eagle </span></h3>
+                  <p class="card-text">Built an optimization model to find the most efficient assortment of products for a clothing store distribution center to minimize shipping costs. To achieve this, our team created vector embeddings from SKU descriptions and optimized them via a linear program.
+                    </p>
+              </div> 
+              </div> 
+              <p></p><p></p><p></p>
+
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title"><span style="color: #001eff;">Intuitive Surgical </span></h3>
+                  <p class="card-text">Trained a Computer Vision model to filter blurry images from a medical data set and used PCA/SVM on transformed images via the Laplacian process. This cleaned dataset was used to run an unsupervised model via clustering/PCA to find patterns in the medical data.
+
+                    
+                    </p>
+              </div> 
+              </div> 
+              
+            </div>
+          </div>
+          <p></p><p></p>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Software Developer - <span style="color: #3b11c3;">Flyerstack</span></h3>
+              <h6><span style="color: #676767;">August 2021 - May 2022</span></h6>
+              <p class="card-text">Led the development of a full-stack, cross-platform app via React Native for a student-led startup that enabled students in Berkeley to receive notifications about events in and around the campus; used Firebase as the backend for all users & event-related data.</p>
+            </div>
+          </div>
+          <p></p><p></p>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">WWDC Scholar - <span style="color: #515151;">Apple</span></h3>
+              <h6><span style="color: #676767;">May 2019</span></h6>
+              <p class="card-text">Created a playground using Swift and participated in several interviews with Tim Cook; 1 of 350 global participants.
+            </p>
+            </div>
+          </div>
+          
+      </section>
+      <p></p><p></p>
+
+
+   <section id="skills">
+  <h2>Skills</h2>
+  <div class="d-flex flex-wrap">
+     <h3><span class="badge badge-primary mr-2 mb-2">Python</span></h3>
+     <h3><span class="badge badge-success mr-2 mb-2">C</span></h3>
+     <h3><span class="badge badge-danger mr-2 mb-2">JavaScript</span></h3>
+     <h3><span class="badge badge-warning mr-2 mb-2">Java</span></h3>
+      <h3><span class="badge badge-secondary mr-2 mb-2">HTML5</span></h3>
+     <h3><span class="badge badge-info mr-2 mb-2">CSS3</span></h3>
+     <h3><span class="badge badge-light mr-2 mb-2">React Native</span></h3>
+     <h3><span class="badge badge-dark mr-2 mb-2">Numpy</span></h3>
+     <h3><span class="badge badge-primary mr-2 mb-2">Pandas</span></h3>
+     <h3><span class="badge badge-success mr-2 mb-2">Pytorch</span></h3>
+     <h3><span class="badge badge-danger mr-2 mb-2">MongoDB</span></h3>
+     <h3><span class="badge badge-warning mr-2 mb-2">Docker</span></h3>
+      <h3><span class="badge badge-secondary mr-2 mb-2">Golang</span></h3>
+     <h3><span class="badge badge-info mr-2 mb-2">SQL</span></h3>
+     <h3><span class="badge badge-light mr-2 mb-2">SQLite</span></h3>
+     <h3><span class="badge badge-dark mr-2 mb-2">NoSQL</span></h3>
+     <h3><span class="badge badge-primary mr-2 mb-2">Node</span></h3>
+     <h3><span class="badge badge-success mr-2 mb-2">AWS</span></h3>
+     <h3><span class="badge badge-danger mr-2 mb-2">Jenkins</span></h3>
+     <h3><span class="badge badge-warning mr-2 mb-2">Grafana</span></h3>
+  </div>
+</section>
+
+<section id="Hobbies"></section>
+
+
+      <section> <p></p></section>
+    <section> <p><b>© Tanvi Khot, 2024</b></p></section>
+  
+    </div>
+  
+    <script>     
+
+      function openLink(icon, link, id) {
+          var button = document.getElementById(id);
+      
+          button.innerHTML = '🔗';
+          if (!link.includes('://')) {
+              link = 'http://' + link;
+          }
+          window.open(link, '_blank');
+      
+          setTimeout(function() {
+              button.innerHTML = icon;
+          }, 1000);
+      }
+      </script>
+    <script src="script.js"></script>
+    <!-- Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</body>
+</html>
