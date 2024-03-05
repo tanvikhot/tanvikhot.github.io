@@ -9,13 +9,15 @@
   <link rel="stylesheet" href="styles.css">
   <!-- Bootstrap CSS link -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
 </head>
 <body>
-
+  
   <div class="container mt-4">
     <header class="text-center">
-      <img src="images/tanvipfp.png" alt="Your Profile Picture" class="img-fluid rounded-circle" style="width: 500px; height: 500px;">
-      <h1 class="mt-3">Hello, I'm Tanvi, a <span style="color: #be6b06;">Software Engineer.</span> </h1>
+      <img src="images/tanvipfp.png" alt="Your Profile Picture" class="img-fluid rounded-circle" style="max-width:100%; width: 450px;">
+      
+      <h1 class="mt-3">Hello, I'm Tanvi, a <span style="color: #be6b06; text-align: center;">Software Engineer.</span> </h1>
     </header>
     <div class="container">
       
@@ -36,6 +38,12 @@
           <img src="images/github.png" alt="GitHub Icon" width="20" height="20">
           <span class="badge badge-light"></span>
         </button>
+        
+
+        <button type="button" class="btn btn-primary mr-1 mb-2" id="downloadResumeButton" onclick="downloadResume()">
+          <img src="images/resume.png" alt="Resume Icon" width="20" height="20">
+          <span class="badge badge-light"></span>
+      </button>
       </section>
     </div>
     
@@ -207,7 +215,21 @@
               button.innerHTML = icon;
           }, 1000);
       }
+      function downloadResume() {
+        var button = document.getElementById("downloadResumeButton");
+      
+        button.innerHTML = '🔗';
+        icon = '<img src=\'images/resume.png\' alt=\'Resume Icon\' width=\'20\' height=\'20\'>';
+        var resumePath = 'TANVI_KHOT_RESUME_website.pdf';
+
+        window.open(resumePath, '_blank');
+
+        setTimeout(function() {
+              button.innerHTML = icon;
+          }, 1000);
+    }
       </script>
+
     <script src="script.js"></script>
     <!-- Bootstrap JS and Popper.js scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
