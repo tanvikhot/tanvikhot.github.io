@@ -1,5 +1,8 @@
 body {
   font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .container {
@@ -32,8 +35,9 @@ li {
 /* Specific styles for the experience cards */
 .card {
   border-radius: 30px; /* Increased border-radius for very round rectangles */
-  border: 5px solid #007bff; /* Adjusted border thickness for a thicker outline */
+  /* border: 5px solid #007bff; Adjusted border thickness for a thicker outline */
   margin-bottom: 20px;
+  background-color: #fbe9d0;
 }
 
 .card-body {

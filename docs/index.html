@@ -9,52 +9,74 @@
   <link rel="stylesheet" href="styles.css">
   <!-- Bootstrap CSS link -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  
+  <style>
+    /* Make the container take full viewport height */
+    .full-height {
+        height: 100vh; /* 100% of the viewport height */
+        display: flex;
+        padding-left: 10%;
+        flex-direction: row; /* Align content side by side */
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+        text-align: left; /* Make sure text aligns left in the left section */
+    }
+    .other-sec {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    </style>
 </head>
-<body>
-  
-  <div class="container mt-4">
-    <header class="text-center">
-      <img src="images/tanvipfp.png" alt="Your Profile Picture" class="img-fluid rounded-circle" style="max-width:100%; width: 450px;">
-      
-      <h1 class="mt-3">Hello, I'm Tanvi, a <span style="color: #be6b06; text-align: center;">Software Engineer.</span> </h1>
-    </header>
-    <div class="container">
-      
-  
-      <section id="contact" class="text-center">
-  
-        <button type="button" class="btn btn-success mr-1 mb-2" id="emailButton" onclick='openLink("✉️", "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent("tanvikhot@berkeley.edu"), "emailButton")'>
-          ✉️
-          <span class="badge badge-light"></span>
-        </button>
-  
-        <button type="button" class="btn btn-info mr-1 mb-2" id="linkedInButton" onclick="openLink('<img src=\'images/linkedin.png\' alt=\'LinkedIn Icon\' width=\'20\' height=\'20\'>', 'linkedin.com/in/tanvi-khot', 'linkedInButton')">
-          <img src="images/linkedin.png" alt="LinkedIn Icon" width="20" height="20">
-          <span class="badge badge-light"></span>
-        </button>
-  
-        <button type="button" class="btn btn-warning mr-1 mb-2" id="githubButton" onclick="openLink('<img src=\'images/github.png\' alt=\'GitHub Icon\' width=\'20\' height=\'20\'>', 'github.com/tanvikhot', 'githubButton')">
-          <img src="images/github.png" alt="GitHub Icon" width="20" height="20">
-          <span class="badge badge-light"></span>
-        </button>
-        
+<body style = "background-color: #fbe9d0">
+  <div class="container-fluid full-height">
+    <div class="row">
+        <!-- Left column: Elevator Pitch and Introduction -->
+        <div class="col-md-6">
+            <header class="text-left">
+              <h1 class="mt-3"><br>Hi! I'm Tanvi, a <span style="color: #be6b06;">Software Engineer.</span></h1>
+                  <p>
+                    <br>
+                    I am a software engineer working at Salesforce under the 
+                    <a href="https://help.salesforce.com/s/articleView?id=sf.c360_a_data_cloud.htm&type=5">Data Cloud team</a> 
+                    passionate about creating in any way I can. <br><br> I studied at UC Berkeley where I majored in Computer Science with a focus on data science and how we can use it in a million different ways. I’ve done a lot of cool projects and research in a wide variety of specializations, and have experience working with LLMs/NLP with the Berkeley Speech Group, Machine Learning & Data Science with friends at 
+                    <a href="https://bd.studentorg.berkeley.edu/">Big Data @ Berkeley</a>, CI/CD @ Salesforce, and full-stack applications at 
+                    <a href="https://skydeck.berkeley.edu/portfolio/">various different grassroots startups</a>. <br><br>
+                    I have prior experience working with languages like Python, Java, C, Javascript, Groovy, and several others.<br><br> When I'm not doing this, you can find me painting, playing basketball, or collecting cool trinkets˚⋆𐙚｡⋆𖦹.✧˚
+                </p>
+            </header>
+        </div>
+        <div class="col-md-6 d-flex flex-column align-items-center">
+          <!-- Profile Image -->
+          <img src="images/tanvipfp.png" alt="Your Profile Picture" class="img-fluid rounded-circle mb-4" style="max-width:100%; width: 500px; border-radius: 50%; margin-bottom: 20px;">
 
-        <button type="button" class="btn btn-primary mr-1 mb-2" id="downloadResumeButton" onclick="downloadResume()">
-          <img src="images/resume.png" alt="Resume Icon" width="20" height="20">
-          <span class="badge badge-light"></span>
-      </button>
-      </section>
-    </div>
-    
-    <section id="about">
-        <p></p><p></p><p></p><p></p>
-      <h2>The Elevator Pitch</h2>
-      <p>I am a fourth-year at UC Berkeley majoring in Computer Science with a focus on data and its applications to business, AI, and software engineering. I’ve done a lot of cool projects and research in a wide variety of specializations, and have experience working with LLMs/NLP, Big Data, Machine Learning, CI/CD, and full-stack applications. I  have prior experience working with languages like Python, Java, C, Javascript, and several others.
-    </p>
-    </section>
+          <!-- Buttons -->
+          <section id="contact" class="text-center">
+              <button type="button" class="btn btn-success mr-1 mb-2" id="emailButton" onclick='openLink("✉️", "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent("tanvikhot@berkeley.edu"), "emailButton")'>
+                  ✉️
+                  <span class="badge badge-light"></span>
+              </button>
+
+              <button type="button" class="btn btn-info mr-1 mb-2" id="linkedInButton" onclick="openLink('<img src=\'images/linkedin.png\' alt=\'LinkedIn Icon\' width=\'20\' height=\'20\'>', 'linkedin.com/in/tanvi-khot', 'linkedInButton')">
+                  <img src="images/linkedin.png" alt="LinkedIn Icon" width="20" height="20">
+                  <span class="badge badge-light"></span>
+              </button>
+
+              <button type="button" class="btn btn-warning mr-1 mb-2" id="githubButton" onclick="openLink('<img src=\'images/github.png\' alt=\'GitHub Icon\' width=\'20\' height=\'20\'>', 'github.com/tanvikhot', 'githubButton')">
+                  <img src="images/github.png" alt="GitHub Icon" width="20" height="20">
+                  <span class="badge badge-light"></span>
+              </button>
+
+              <button type="button" class="btn btn-primary mr-1 mb-2" id="downloadResumeButton" onclick="downloadResume()">
+                  <img src="images/resume.png" alt="Resume Icon" width="20" height="20">
+                  <span class="badge badge-light"></span>
+              </button>
+          </section>
+      </div>
+  </div>
+</div>
+  
 
 <p></p><p></p><p></p>
+<div class = "container-fluid other-sec">
     <section id="experience">
       <h2>My Work</h2>
       <p></p><p></p><p></p>
@@ -195,6 +217,7 @@
 <button class="btn btn-success" onclick="smiski()">Online Smiskis</button>
 </p>
 </section>
+
 <section id="Hobbies"></section>
 
 
@@ -202,6 +225,7 @@
     <section> <p><b>© Tanvi Khot, 2024</b></p></section>
   
     </div>
+  </div>
   
     <script>     
 
@@ -223,7 +247,7 @@
       
         button.innerHTML = '🔗';
         icon = '<img src=\'images/resume.png\' alt=\'Resume Icon\' width=\'20\' height=\'20\'>';
-        var resumePath = 'TANVI_KHOT_RESUME_website.pdf';
+        var resumePath = 'https://docs.google.com/document/d/1pol2koVi12Alsipc7AbJRcF4JocRD1EoE7jxSgfAMus/edit?usp=sharing';
 
         window.open(resumePath, '_blank');
 
