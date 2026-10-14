@@ -29,7 +29,7 @@ app.use(
   // Note that `express.static` will send the contents of `index.html` if no path is specified
   //   (i.e. http://localhost:8000/), as is standard. You can configure this if you'd like:
   //   https://expressjs.com/en/4x/api.html#express.static
-  express.static('public/'),
+  express.static('docs/'),
 );
 
 // That said, we don't *need* to have a file in the filesystem for every route on the server.

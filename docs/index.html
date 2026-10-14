@@ -1,283 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tanvi Khot</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctext x='0' y='12' font-size='12' fill='%23ff0000'%3E🌷%3C/text%3E%3C/svg%3E">
-
-  <link rel="stylesheet" href="styles.css">
-  <!-- Bootstrap CSS link -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    /* Make the container take full viewport height */
-    .full-height {
-        height: 100vh; /* 100% of the viewport height */
-        display: flex;
-        padding-left: 10%;
-        flex-direction: row; /* Align content side by side */
-        justify-content: center; /* Center the content horizontally */
-        align-items: center; /* Center the content vertically */
-        text-align: left; /* Make sure text aligns left in the left section */
-    }
-    .other-sec {
-      padding-left: 10%;
-      padding-right: 10%;
-    }
-    .cardb {
-      border-radius: 0px;
-      border: 5px solid #90AEAD;
-      background-color: #fbe9d0;
-    }
-    a {
-      color: #244855;
-      text-decoration: underline;
-    }
-    /* a:hover {
-      color: #244855;
-      text-decoration: underline;
-    } */
-    </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151715">
+  <meta name="description" content="Tanvi Khot — software engineer, Berkeley CS alum, and maker. Explore my work through an interactive terminal portfolio.">
+  <title>Tanvi Khot · Terminal</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23151715'/%3E%3Ctext x='10' y='43' font-size='36' fill='%23dfeb9e' font-family='monospace'%3E%3E_%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="portfolio-content.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
-<body style = "background-color: #fbe9d0">
-  <div class="container-fluid full-height">
-    <div class="row">
-        <!-- Left column: Elevator Pitch and Introduction -->
-        <div class="col-md-6">
-            <header class="text-left">
-              <h1 class="mt-3"><br>Hi! I'm Tanvi.</span></h1>
-                  <p>
-                    <br>
-                    I am a software engineer working at Salesforce under the 
-                    <a href="https://help.salesforce.com/s/articleView?id=sf.c360_a_data_cloud.htm&type=5">Data Cloud team</a> 
-                    passionate about creating in any way I can. <br><br> I studied at UC Berkeley where I majored in Computer Science with a focus on data science and how we can use it in a million different ways. I’ve done a lot of cool projects and research in a wide variety of specializations, and have experience working with LLMs/NLP with the Berkeley Speech Group, Machine Learning & Data Science with friends at 
-                    <a href="https://bd.studentorg.berkeley.edu/">Big Data @ Berkeley</a>, CI/CD @ Salesforce, and full-stack applications at 
-                    <a href="https://skydeck.berkeley.edu/portfolio/">various different grassroots startups</a>. <br><br>
-                    I have prior experience working with languages like Python, Java, C, Javascript, Groovy, and several others.<br><br> When I'm not doing this, you can find me painting, playing basketball, or collecting cool trinkets˚⋆𐙚｡⋆𖦹.✧˚
-                </p>
-            </header>
+<body>
+  <header class="masthead"><a class="wordmark" href="index.html" aria-label="Tanvi Khot home"><span class="mark">tk<span>_</span></span> tanvi khot</a></header>
+  <main>
+    <div class="eyebrow"><span>AN INTERACTIVE PORTFOLIO</span></div>
+    <section class="workspace" aria-label="Interactive portfolio">
+      <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>visitor@tanvi: ~</span><span class="shell-label">portfolio.sh</span></div>
+      <div class="workspace-body">
+        <div class="terminal" id="terminal">
+          <div id="welcome">
+            <div class="boot"><span class="green">✓</span> Connection established.<span class="boot-label">welcome to my little corner of the internet</span></div>
+            <h1 class="sr-only">Hi, I'm Tanvi Khot.</h1>
+            <pre class="ascii" aria-hidden="true"> _                    _
+| |_ __ _ _ ____   __(_)
+| __/ _` | '_ \ \ / / |
+| || (_| | | | \ V /| |
+ \__\__,_|_| |_|\_/ |_|<span class="ascii-dot">.</span></pre>
+            <p class="intro">Software engineer. Creative at heart.</p>
+            <p class="intro-detail">Building things at <span>Salesforce</span>. Rooted in <span>Berkeley</span>.</p>
+            <div class="welcome-rule"></div>
+            <p class="welcome-text">Explore my work and background.</p>
+            <p class="hint">Type <code>help</code> to see available commands.</p>
+            <p class="keyboard-tip"><kbd>tab</kbd> autocomplete <span>·</span> <kbd>↑</kbd><kbd>↓</kbd> history <span>·</span> <kbd>ctrl</kbd> + <kbd>l</kbd> clear</p>
+          </div>
+          <div id="output" role="log" aria-label="Command output" aria-live="polite" aria-relevant="additions"></div>
+          <form id="command-form" autocomplete="off"><label for="command"><span class="prompt-user">visitor</span><span class="prompt-host">@tanvi</span> <span class="prompt-path">~</span> <span class="prompt-arrow">❯</span></label><input id="command" name="command" aria-label="Terminal command" aria-describedby="input-tip" spellcheck="false" autocapitalize="off" enterkeyhint="send" placeholder="type a command…"><button type="submit" class="enter-button" aria-label="Run command">↵</button></form>
+          <span id="input-tip" class="sr-only">Enter help for commands. Tab completes commands. Up and down arrows browse history.</span>
+          <noscript><p>Enable JavaScript to use the terminal. I’m Tanvi, a software engineer at Salesforce and a UC Berkeley Computer Science alum. My work spans full-stack development, data science, and LLM research. Outside work, I enjoy painting, basketball, and collecting trinkets.</p></noscript>
         </div>
-        <div class="col-md-6 d-flex flex-column align-items-center">
-          <!-- Profile Image -->
-          <img src="images/tanvipfp.png" alt="Your Profile Picture" class="img-fluid rounded-circle mb-4" style="max-width:100%; width: 500px; border-radius: 50%; margin-bottom: 20px;">
-
-          <!-- Buttons -->
-          <section id="contact" class="text-center">
-              <button type="button" class="btn btn-success mr-1 mb-2" id="emailButton" onclick='openLink("✉️", "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent("tanvikhot@berkeley.edu"), "emailButton")'>
-                  ✉️
-                  <span class="badge badge-light"></span>
-              </button>
-
-              <button type="button" class="btn btn-info mr-1 mb-2" id="linkedInButton" onclick="openLink('<img src=\'images/linkedin.png\' alt=\'LinkedIn Icon\' width=\'20\' height=\'20\'>', 'linkedin.com/in/tanvi-khot', 'linkedInButton')">
-                  <img src="images/linkedin.png" alt="LinkedIn Icon" width="20" height="20">
-                  <span class="badge badge-light"></span>
-              </button>
-
-              <button type="button" class="btn btn-warning mr-1 mb-2" id="githubButton" onclick="openLink('<img src=\'images/github.png\' alt=\'GitHub Icon\' width=\'20\' height=\'20\'>', 'github.com/tanvikhot', 'githubButton')">
-                  <img src="images/github.png" alt="GitHub Icon" width="20" height="20">
-                  <span class="badge badge-light"></span>
-              </button>
-
-              <button type="button" class="btn btn-primary mr-1 mb-2" id="downloadResumeButton" onclick="downloadResume()">
-                  <img src="images/resume.png" alt="Resume Icon" width="20" height="20">
-                  <span class="badge badge-light"></span>
-              </button>
-          </section>
       </div>
-  </div>
-</div>
-  
-
-<p></p><p></p><p></p>
-<div class = "container-fluid other-sec">
-    <section id="experience">
-      <h2>My Work</h2>
-      <p></p><p></p><p></p>
-
-  
-        <div class="card cardb">
-          <div class="card-body">
-            <h3 class="card-title">SWE Intern - <span style="color: #874F41;">Salesforce</span></h3>
-            <h6><span style="color: #676767;">May 2023 - August 2023</span></h6>
-            <p class="card-text">Collected, stored, provisioned unstructured data via the <a href="https://aws.amazon.com/what-is/elk-stack/#:~:text=offered%20by%20AWS%3F-,What%20is%20the%20ELK%20Stack%3F,Elasticsearch%2C%20Logstash%2C%20and%20Kibana.">ELK stack</a> from an internal tooling service using tools 
-              like <a href="https://www.jenkins.io/">Jenkins</a>, <a href="https://prometheus.io/">Prometheus</a>, and <a href="https://grafana.com/">Grafana</a>. Stored data into an AWS Time Series Database, cleaned 100,000+ datapoints and made the data 
-              available to pipeline engineering developers to ensure their services are functioning as expected.
-              
-              </p>
-          </div>
-        </div>
-        
-       <p></p><p></p>
-          <div class="card cardb">
-            <div class="card-body">
-              <h3 class="card-title">SWE Intern - <span style="color: #874F41;">Salesforce</span></h3>
-              <h6><span style="color: #676767;">May 2022 - August 2022</span></h6>
-              <p class="card-text">
-                Built several APIs to proxy requests from authenticated local users to AWS resources like
-                 <a href="https://aws.amazon.com/secrets-manager/">Secrets Manager</a> and 
-                 <a href="https://aws.amazon.com/pm/serv-s3/?gclid=CjwKCAiA_5WvBhBAEiwAZtCU78xhCPCXGsHl8PZ0vmqY4vwPuNMO1qaEEz62S7a85fAjT7De-0zZ-xoCb0oQAvD_BwE&trk=fecf68c9-3874-4ae2-a7ed-72b6d19c8034&sc_channel=ps&ef_id=CjwKCAiA_5WvBhBAEiwAZtCU78xhCPCXGsHl8PZ0vmqY4vwPuNMO1qaEEz62S7a85fAjT7De-0zZ-xoCb0oQAvD_BwE:G:s&s_kwcid=AL!4422!3!536452728638!e!!g!!aws%20s3%20account!11204620052!112938567994">S3</a>, 
-                 authenticated Salesforce developers using <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">GitHub access tokens</a>.
-                 AWS resources were provisioned for multiple master accounts per user group, and User group management and user preferences were stored in <a href="https://www.mongodb.com/">MongoDB</a>.
-            </p>
-            </div>
-            
-          </div>
-
-          <p></p><p></p>
-
-          <div class="card cardb">
-            <div class="card-body">
-              <h3 class="card-title">Undergraduate Researcher - <span style="color: #874F41;">Berkeley Artificial Intelligence Research [BAIR] </span></h3>
-              <h6><span style="color: #676767;">October 2023 - Present</span></h6>
-              <p class="card-text">LLMs and Speech @ Berkeley Speech Group under Gopala Anumanchipalli and Akshat Gupta- 
-                Researching a novel approach in knowledge editing LLMs; verifying the persistence of an added fact and 
-                related knowledge to an LLM through past endeavors such as <a href="https://arxiv.org/abs/2202.05262">ROME</a>, <a href="https://arxiv.org/abs/2110.11309">MEND</a>, and <a href="https://arxiv.org/abs/2210.07229">MEMIT</a>.
-                </p>
-
-                
-            </div>
-          </div>
-          <p></p><p></p>
-
-          <div class="card cardb">
-            <div class="card-body">
-              <h3 class="card-title">Project Manager  - <span style="color: #874F41;">Big Data at Berkeley </span></h3>
-              <h6><span style="color: #676767;">August 2021 - Present</span></h6>
-              <div class="card cardb">
-                <div class="card-body">
-                  <h3 class="card-title"><span style="color: #874F41;">Valuenex </span></h3>
-                  <p class="card-text">Designed a web scraping tool using Selenium to gather recent tweets and Google results about startups and used the chatGPT API to predict evaluation using that info. Built a model around the normal distribution to predict the uniqueness of the company to add to Valuenex’s product “startup finder”
-                    
-                    </p>
-              </div> 
-              </div>  
-              <p></p><p></p><p></p>
-              <div class="card cardb">
-                <div class="card-body">
-                  <h3 class="card-title"><span style="color: #874F41;">American Eagle </span></h3>
-                  <p class="card-text">Built an optimization model to find the most efficient assortment of products for a clothing store distribution center to minimize shipping costs. To achieve this, our team created vector embeddings from SKU descriptions and optimized them via a linear program.
-                    </p>
-              </div> 
-              </div> 
-              <p></p><p></p><p></p>
-
-              <div class="card cardb">
-                <div class="card-body">
-                  <h3 class="card-title"><span style="color: #874F41;">Intuitive Surgical </span></h3>
-                  <p class="card-text">Trained a Computer Vision model to filter blurry images from a medical data set and used PCA/SVM on transformed images via the Laplacian process. This cleaned dataset was used to run an unsupervised model via clustering/PCA to find patterns in the medical data.
-
-                    
-                    </p>
-              </div> 
-              </div> 
-              
-            </div>
-          </div>
-          <p></p><p></p>
-
-          <div class="card cardb">
-            <div class="card-body">
-              <h3 class="card-title">Software Developer - <span style="color: #874F41;">Flyerstack</span></h3>
-              <h6><span style="color: #676767;">August 2021 - May 2022</span></h6>
-              <p class="card-text">Led the development of a full-stack, cross-platform app via React Native for a student-led startup that enabled students in Berkeley to receive notifications about events in and around the campus; used Firebase as the backend for all users & event-related data.</p>
-            </div>
-          </div>
-          <p></p><p></p>
-          <div class="card cardb">
-            <div class="card-body">
-              <h3 class="card-title">WWDC Scholar - <span style="color: #874F41;">Apple</span></h3>
-              <h6><span style="color: #676767;">May 2019</span></h6>
-              <p class="card-text">Created a playground using Swift and participated in several interviews (<a href="https://www.bustle.com/p/3-women-under-18-in-stem-you-need-to-know-about-right-now-17913315">Bustle</a>,
-                <a href="https://www.linkedin.com/in/tanvi-khot/overlay/1586663790033/single-media-viewer?type=LINK&profileId=ACoAACCC_n0BzSWKfzWNw7Q_KHGMO2bHiebcoBM&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B%2FxS1dy%2B9T2yyYzyAeywf0w%3D%3D">Refinery29</a>, 
-                <a href="https://www.youtube.com/watch?v=qsWFDFkpAnw">iJustine</a>) with Tim Cook; 1 of 350 global participants.
-                
-              </p>
-            </div>
-          </div>
-          
-      </section>
-      <p></p><p></p>
-
-
-   <section id="skills">
-  <h2>Skills</h2>
-  <div class="d-flex flex-wrap">
-     <h3><span class="badge badge-primary mr-2 mb-2">Python</span></h3>
-     <h3><span class="badge badge-success mr-2 mb-2">C</span></h3>
-     <h3><span class="badge badge-danger mr-2 mb-2">JavaScript</span></h3>
-     <h3><span class="badge badge-warning mr-2 mb-2">Java</span></h3>
-      <h3><span class="badge badge-secondary mr-2 mb-2">HTML5</span></h3>
-     <h3><span class="badge badge-info mr-2 mb-2">CSS3</span></h3>
-     <h3><span class="badge badge-light mr-2 mb-2">React Native</span></h3>
-     <h3><span class="badge badge-dark mr-2 mb-2">Numpy</span></h3>
-     <h3><span class="badge badge-primary mr-2 mb-2">Pandas</span></h3>
-     <h3><span class="badge badge-success mr-2 mb-2">Pytorch</span></h3>
-     <h3><span class="badge badge-danger mr-2 mb-2">MongoDB</span></h3>
-     <h3><span class="badge badge-warning mr-2 mb-2">Docker</span></h3>
-      <h3><span class="badge badge-secondary mr-2 mb-2">Golang</span></h3>
-     <h3><span class="badge badge-info mr-2 mb-2">SQL</span></h3>
-     <h3><span class="badge badge-light mr-2 mb-2">SQLite</span></h3>
-     <h3><span class="badge badge-dark mr-2 mb-2">NoSQL</span></h3>
-     <h3><span class="badge badge-primary mr-2 mb-2">Node</span></h3>
-     <h3><span class="badge badge-success mr-2 mb-2">AWS</span></h3>
-     <h3><span class="badge badge-danger mr-2 mb-2">Jenkins</span></h3>
-     <h3><span class="badge badge-warning mr-2 mb-2">Grafana</span></h3>
-  </div>
-</section>
-<section id="Projects">
-  <p></p><p></p><p></p><p></p>
-<h2>Fun Projects!</h2>
-<button class="btn btn-success" onclick="smiski()">Online Smiskis</button>
-</p>
-</section>
-
-<section id="Hobbies"></section>
-
-
-      <section> <p></p></section>
-    <section> <p><b>© Tanvi Khot, 2024</b></p></section>
-  
-    </div>
-  </div>
-  
-    <script>     
-
-      function openLink(icon, link, id) {
-          var button = document.getElementById(id);
-      
-          button.innerHTML = '🔗';
-          if (!link.includes('://')) {
-              link = 'http://' + link;
-          }
-          window.open(link, '_blank');
-      
-          setTimeout(function() {
-              button.innerHTML = icon;
-          }, 1000);
-      }
-      function downloadResume() {
-        var button = document.getElementById("downloadResumeButton");
-      
-        button.innerHTML = '🔗';
-        icon = '<img src=\'images/resume.png\' alt=\'Resume Icon\' width=\'20\' height=\'20\'>';
-        var resumePath = 'https://docs.google.com/document/d/1pol2koVi12Alsipc7AbJRcF4JocRD1EoE7jxSgfAMus/edit?usp=sharing';
-
-        window.open(resumePath, '_blank');
-
-        setTimeout(function() {
-              button.innerHTML = icon;
-          }, 1000);
-      }
-      function smiski(){
-        window.location.href = 'http://www.tanvikhot.com/smiski';
-      }
-      </script>
-
-    <script src="script.js"></script>
-    <!-- Bootstrap JS and Popper.js scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+      <div class="status-bar"><span><i></i> ONLINE</span><span>UTF-8 <span class="status-divider">/</span> INTERACTIVE MODE <span class="status-divider">/</span> <span id="clock">--:--</span></span></div>
+    </section>
+    <footer><span>© <span id="year"></span> Tanvi Khot</span></footer>
+  </main>
 </body>
 </html>
